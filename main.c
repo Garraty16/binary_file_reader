@@ -21,6 +21,8 @@
 			printf("Unable to open file!");
 			return 1;
 		}
+		
+		// while not EoF
 		while (fread(&my_record,sizeof(struct rec),1,ptr_myfile) == 1)
 		{
 			printf("%d\t",my_record.num);
@@ -28,6 +30,7 @@
 			printf("%f\t\n",my_record.f);
 			fsize += sizeof(struct rec);
 		}
+		
 		fclose(ptr_myfile);
 		printf("File size: %d\n", fsize);
 		return 0;

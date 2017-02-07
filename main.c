@@ -22,9 +22,9 @@
 		while (fread(&my_record,sizeof(struct rec),1,ptr_myfile) == 1)
 		{
 			
-			printf("%d\n",my_record.num);
-			printf("%s\n",my_record.str);
-			printf("%f\n",my_record.f);
+			printf("%d\t",my_record.num);
+			printf("%s\t",my_record.str);
+			printf("%f\t\n",my_record.f);
 		}
 		fclose(ptr_myfile);
 		return 0;
